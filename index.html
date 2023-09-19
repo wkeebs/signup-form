@@ -3,16 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Sign Up | Odin</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="left shadow">
       <div class="image-container">
-        <div class="logo-container">
-          <img class="logo" src="./images/odin.png" alt="" />
-          <span>ODIN</span>
-        </div>
         <div class="caption">
           Photo by
           <a
@@ -28,7 +24,60 @@
       </div>
     </div>
     <div class="right">
-      <div class="form-container"></div>
+      <div class="form-container">
+        <div class="title-container">
+          <h1>Sign Up</h1>
+        </div>
+        <hr class="double" />
+        <div class="form-holder">
+          <form action="">
+            <div class="form-section">
+              <div class="form-input">
+                <label for="first_name">FIRST NAME</label>
+                <input type="text" name="first_name" id="first_name" />
+              </div>
+              <div class="form-input">
+                <label for="last_name">LAST NAME</label>
+                <input type="text" name="last_name" id="last_name" />
+              </div>
+            </div>
+            <div class="form-section">
+              <div class="form-input">
+                <label for="email">EMAIL</label>
+                <input type="email" name="email" id="email" />
+              </div>
+              <div class="form-input">
+                <label for="phone">PHONE NUMBER</label>
+                <input type="number" name="phone" id="phone" />
+              </div>
+            </div>
+            <div class="form-section">
+              <div class="form-input">
+                <label for="password">PASSWORD</label>
+                <input type="password" name="password" id="password" required />
+              </div>
+              <div class="form-input">
+                <label for="password-confirm">CONFIRM PASSWORD</label>
+                <input
+                  type="password"
+                  name="password-confirm"
+                  id="password-confirm"
+                  required
+                />
+              </div>
+            </div>
+            <span id="error-msg"></span>
+          </form>
+        </div>
+        <hr class="double" />
+        <div class="submit-holder">
+          <button class="submit-btn">Create Account</button>
+        </div>
+        <div class="login-holder">
+          <span class="login">Already have an account? <a>Log In</a></span>
+        </div>
+      </div>
     </div>
   </body>
+  <script src="script.js"></script>
 </html>

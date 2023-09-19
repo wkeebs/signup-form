@@ -1,23 +1,38 @@
-* {
+*,
+*:before,
+*:after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
   --mint-green: #bee9e8ff;
   --moonstone: #62b6cbff;
   --indigo-dye: #1b4965ff;
+  --dark: rgb(12, 30, 41);
   --columbia-blue: #cae9ffff;
   --picton-blue: #5fa8d3ff;
 
-  background-color: var(--indigo-dye);
+  /* background-color: var(--indigo-dye); */
   position: fixed;
 }
 
 body {
   display: flex;
   flex-direction: row;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Manrope", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  /* margin-top: 0.5em; */
+  font-size: 1em;
+  font-weight: 300;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
 }
 
 .left {
@@ -26,6 +41,14 @@ body {
 
 .right {
   width: 65vw;
+}
+
+.form-container {
+  margin: 4rem;
+  border-radius: 0.5em;
+  box-shadow: 1px 1px 5px black;
+  padding-bottom: 1rem;
+  margin-top: 10rem;
 }
 
 .image-container {
@@ -37,11 +60,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  clip-path: ellipse(47% 80% at 30% 50%);
+  clip-path: ellipse(50% 80% at 30% 50%);
 }
 
 .shadow {
-  filter: drop-shadow(2px 0px 10px #000000);
+  filter: drop-shadow(5px 0px 10px var(--dark));
 }
 
 .caption {
@@ -61,21 +84,100 @@ body {
   color: whitesmoke;
 }
 
-.logo-container {
-  background-color: rgba(0, 0, 0, 0.1);
+.title-container {
   padding: 20px;
-  text-shadow: -2px -2px var(--indigo-dye);
-  font-weight: 500;
-  font-size: 3rem;
-  font-style: oblique;
-  color: whitesmoke;
+  font-size: 2rem;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   gap: 10px;
 }
 
-.logo {
-  width: 3.5rem;
+.form-holder {
+  padding: 2em;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid rgb(194, 194, 194);
+  border-radius: 5px;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.08);
+}
+
+.rounded-input {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.form-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+input,
+textarea,
+label {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.form-input {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+}
+
+label {
+  font-size: 1em;
+  color: var(--dark);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.unmatched {
+  border-color: red;
+}
+
+#error-msg {
+  color: red;
+  margin-left: 1em;
+}
+
+.submit-holder, .login-holder {
+  margin-left: 3em;
+}
+
+button {
+  margin: 1em 0 1em 0;
+  padding: 15px 50px 15px 50px;
+  background-color: var(--picton-blue);
+  color: whitesmoke;
+  border: 0;
+  border-radius: 5px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+button:active {
+  background: rgb(78, 139, 175);
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+  -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+  box-shadow: inset 0px 0px 5px #c1c1c1;
+  outline: none;
+  transform: translateY(2px);
+}
+
+a {
+    color: var(--picton-blue);
+    cursor: pointer;
 }
