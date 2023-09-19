@@ -17,6 +17,15 @@
 body {
   display: flex;
   flex-direction: row;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.left {
+  width: 35vw;
+}
+
+.right {
+  width: 65vw;
 }
 
 .image-container {
@@ -24,23 +33,49 @@ body {
   background-image: url("./images/background.jpg"); /* Set the background image */
   background-size: cover; /* Scale the background image to cover the entire container */
   background-position: center; /* Center the background image */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  clip-path: ellipse(47% 80% at 30% 50%);
+}
+
+.shadow {
+  filter: drop-shadow(2px 0px 10px #000000);
+}
+
+.caption {
+  width: 50%;
+  margin: 0.7em;
+  text-align: start;
+  color: whitesmoke;
+  opacity: 0.7;
+  text-transform: uppercase;
+  font-size: small;
+}
+
+.caption a {
+  width: 50%;
+  text-decoration: none;
+  font-style: oblique;
+  color: whitesmoke;
 }
 
 .logo-container {
-    width: fit-content;
-    background-color: var(--mint-green);
-    margin: 1em;
-    padding: 10px;
-    box-shadow: -3px -3px var(--indigo-dye);
-    border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-shadow: -2px -2px var(--indigo-dye);
+  font-weight: 500;
+  font-size: 3rem;
+  font-style: oblique;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
 }
 
-.left {
-  width: 35vw;
-  background-color: var(--columbia-blue);
-  overflow: hidden;
-}
-
-.right {
-  width: 65vw;
+.logo {
+  width: 3.5rem;
 }
